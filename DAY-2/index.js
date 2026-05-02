@@ -24,5 +24,5 @@ arr.map(function(x)
 })
 
 arr.map(x=>x*2).forEach(x=>console.log(`Multiplied numbers are ${x}`));
-arr.push("Bharath");
+arr.push("vamsi");
 arr.filter(x=>typeof x==="number").map(x=>x*2).forEach(x=>console.log(`Multiplied numbers are ${x}`));
