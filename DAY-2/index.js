@@ -1,15 +1,15 @@
-let a= "Aaryan";
-let b = "Arush";
-let c = "Arushi";
+let a= "vamsi";
+let b = "Tarun";
+let c = "LUKE";
 
 let d = "Hello "+ a + ", "+b+ " and " + c+ "!";
-// console.log(d);
+ console.log(d);
 
 let e = `Hello ${a}, ${b} and ${c}!`;
-// console.log(e);
+console.log(e);
 
 let f = `The length of a is ${a.length * 2}`;
-// console.log(f);
+console.log(f);
 
 
 //Function
@@ -17,7 +17,7 @@ let f = `The length of a is ${a.length * 2}`;
 // function greet(name){
 //     return `Hello, ${name}!`;
 // }
-// console.log(greet("Pratiksha"));
+// console.log(greet("vamsi"));
 
 
 
@@ -87,25 +87,25 @@ console.log(parseFloat(val))
 
 //Array
 
-let names = ["Joseph", "Rosie", "Carrie"];
+let names = ["vamsi", "tarun", "luke"];
 
-console.log(names.indexOf("Joseph"));
-console.log(names.indexOf("Nick"));
-console.log(names.includes("Rosie"));
-console.log(names.includes("Nick"));
+console.log(names.indexOf("vamsi"));
+console.log(names.indexOf("ram"));
+console.log(names.includes("tarun"));
+console.log(names.includes("ram"));
 console.log(names.length);
 console.log(names[1]);
 console.log(names[names.length-1]);
-names.push("John");
+names.push("keshav");
 console.log(names);
 console.log(names.pop());
-names.unshift("Nichola");
+names.unshift("shyam");
 console.log(names);
 console.log(names.shift());
 console.log(names);
 
 
-let valToBeFind = "Carrie";
+let valToBeFind = "luke";
 let index = -1;
 
 for(let i =0;i< names.length;i++){
@@ -137,7 +137,7 @@ const product = prices.reduce((acc,curr)=> {
     console.log(product);
 
 
-const fruits = ['papaya', 'banana', 'cherry', 'papaya', 'papaya', 'mango', 'mango']; 
+const fruits = ['lichi', 'mulberry', 'cranberry', 'lichi', 'mulberry', 'mango', 'mango']; 
 const tally = fruits.reduce((acc, fruit) => {
     acc[fruit] = (acc[fruit] || 0) + 1;
     return acc;
