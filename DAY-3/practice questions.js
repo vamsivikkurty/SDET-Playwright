@@ -1,3 +1,4 @@
+//DAY 3
 //1. Logging Names
 const names = ['Alice', 'Bob', 'Charlie'];
 
