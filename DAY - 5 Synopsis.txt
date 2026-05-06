@@ -1,0 +1,103 @@
+JSON Methods
+------------
+
+Convert JSON → String
+JSON.stringify(obj);
+
+Convert String → JSON
+JSON.parse('{"name":"vamsi","age":23,"city":"Hyderabad"}');
+
+
+
+Timer Functions
+---------------
+Clear Timeout
+clearTimeout(timeoutId);
+
+Clear Interval
+clearInterval(intervalId);
+
+
+
+Async / Await
+-------------
+
+async function getData() {
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    let data = await response.json();
+
+    console.log(data);
+}
+
+
+
+
+OOPS Concepts
+-------------
+
+
+1. Inheritance
+One class inherits properties and methods from another class.
+class Child extends Parent {
+    constructor(name, role) {
+        super(name);
+        this.role = role;
+    }
+}
+
+
+2. Encapsulation
+Hiding data and controlling access using methods.
+class BankAccount {
+    #balance = 0;
+
+    deposit(amount) {
+        if (amount > 0) {
+            this.#balance += amount;
+
+            console.log(`Deposited: ${amount}. Current Balance: ${this.#balance}`);
+        } else {
+            console.log("Deposit amount must be positive.");
+        }
+    }
+
+    withdraw(amount) {
+        if (amount > 0 && amount <= this.#balance) {
+            this.#balance -= amount;
+
+            console.log(`Withdraw: ${amount}. Current Balance: ${this.#balance}`);
+        } else {
+            console.log("Invalid withdrawal amount.");
+        }
+    }
+}
+
+
+3. Polymorphism
+Same method behaves differently for different objects.
+const shapes = [new Circle(), new Square()];
+
+shapes.forEach(shape => shape.draw());
+
+
+4. Abstraction
+Hiding implementation details and showing only essential features.
+class CoffeeMachine {
+    #waterTemperature = 100;
+
+    #boilWater() {
+        return `Boiling water to ${this.#waterTemperature} degrees.`;
+    }
+
+    #grindBeans() {
+        return "Grinding beans.";
+    }
+}
+
+
+Private Variables
+
+# is used to create private variables and private methods.
+class Example {
+    #data = 10;
+}
