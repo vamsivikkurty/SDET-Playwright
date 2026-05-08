@@ -1,0 +1,179 @@
+# Ques-1 — Flight Booking Data Cleaner
+
+## Workflow
+
+1. Accepted an array containing raw flight data strings.
+
+2. Used map() to iterate through every flight entry.
+
+3. Split each string using split(":") to separate:
+   - route
+   - price
+
+4. Further split the route using split("-") to extract:
+   - departure city
+   - destination city
+
+5. Converted the raw price into a numeric value using Number().
+
+6. Validated invalid price values using isNaN().
+
+7. Created structured flight objects containing:
+   - from
+   - to
+   - price
+
+8. Used filter() to keep only flights with prices between $100 and $500.
+
+9. Converted the final array into JSON format using JSON.stringify().
+
+10. Displayed the cleaned flight data.
+
+## Code Snippet
+
+const [route, rawPrice] = flight.split(":");
+
+const [from, to] = route.split("-");
+
+let price = Number(rawPrice);
+
+if (isNaN(price)) {
+    price = 0;
+}
+
+
+------------------------------------------------------------
+
+# Ques-2 — E-Commerce Discount Applicator
+
+## Workflow
+
+1. Accepted an array of product objects containing:
+   - product name
+   - price
+   - category
+
+2. Created a callback function isEligible() to validate discount conditions.
+
+3. Checked whether:
+   - category is "Electronics"
+   - price is greater than $200
+
+4. Used map() to iterate through all products.
+
+5. Applied a 10% discount to eligible products.
+
+6. Added a new property:
+   - isDiscounted: true for discounted products
+   - isDiscounted: false for non-discounted products
+
+7. Calculated:
+   - total savings
+   - number of discounted items
+
+8. Used setTimeout() to simulate delayed processing.
+
+9. Displayed the updated cart data.
+
+## Code Snippet
+
+if (isEligible(product)) {
+
+    let discount = product.price * 0.10;
+
+    totalSavings += discount;
+    discountedItems++;
+
+    return {
+        name: product.name,
+        price: product.price - discount,
+        category: product.category,
+        isDiscounted: true
+    };
+}
+
+
+------------------------------------------------------------
+
+# Ques-3 — Movie Stream Analytics
+
+## Workflow
+
+1. Accepted an array of raw movie data strings.
+
+2. Used map() to iterate through every movie entry.
+
+3. Used split("|") to separate:
+   - movie name
+   - genre
+   - views
+
+4. Converted the views data into a number using Number().
+
+5. Validated corrupted or invalid view counts using isNaN() and assigned 0 for invalid values.
+
+6. Created structured movie objects containing:
+   - name
+   - genre
+   - views
+
+7. Used filter() to keep only movies:
+   - belonging to "Action" or "Sci‑Fi" genres
+   - having more than 5000 views
+
+8. Used sort() to arrange movies in descending order based on views.
+
+9. Converted the final array into JSON format using JSON.stringify().
+
+10. Displayed the processed analytics data.
+
+## Code Snippet
+
+const [name, genre, views] = item.split("|");
+
+let n_views = Number(views);
+
+if (isNaN(n_views)) {
+    n_views = 0;
+}
+
+
+------------------------------------------------------------
+
+# Ques-4 — Automated Payroll Processor
+
+## Workflow
+
+1. Accepted an array of employee objects containing:
+   - employee ID
+   - employee name
+   - salary
+
+2. Created a callback function taxLogic() to calculate tax based on salary.
+
+3. Used map() to iterate through all employees.
+
+4. Calculated:
+   - tax amount
+   - net salary
+
+5. Determined employee status:
+   - "Premium" → if net salary is greater than $4000
+   - "Standard" → otherwise
+
+6. Used reduce() to calculate the total net payout for all employees.
+
+7. Used setTimeout() to simulate delayed payroll processing.
+
+8. Displayed the processed payroll data after 2000ms.
+
+## Code Snippet
+
+const tax = taxCallback(employee.salary);
+
+const netSalary = employee.salary - tax;
+
+const status =
+    netSalary > 4000
+        ? "Premium"
+        : "Standard";
