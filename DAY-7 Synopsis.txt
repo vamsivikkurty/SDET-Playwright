@@ -1,0 +1,68 @@
+
+# Hoisting
+
+console.log(greet); // undefined
+var greet = "Hello World";
+console.log(greet); // Hello World
+
+Summary:
+- Variables declared with var are hoisted to the top of their scope.
+- During hoisting, only the declaration is moved, not the value assignment.
+- Before assignment, the variable contains undefined.
+
+
+# Function Hoisting
+
+sayHi(); // Hello World!
+
+function sayHi() {
+    console.log("Hello World!");
+}
+
+Summary:
+- Function declarations are fully hoisted.
+- You can call the function before it is declared in the code.
+- JavaScript loads the entire function into memory during the creation phase.
+
+
+# Objects and Prototypes
+
+const car = {
+    brand: "Tesla",
+    start: function () {
+        console.log("Vroom Vroom");
+    }
+};
+
+function Car() {}
+
+const c1 = new Car();
+
+Car.prototype.stop = function () {
+    console.log("Stop");
+};
+
+c1.stop();
+
+Summary:
+- Objects store properties and methods together.
+- Prototypes allow adding shared methods to all object instances.
+- Methods added to prototype are accessible by every object created using the constructor function.
+- Prototype inheritance helps reduce memory usage because methods are shared instead of duplicated.
+
+
+# for...in and for...of
+
+for (let e in arr) {   // returns index
+    console.log(e);
+}
+
+for (let e of arr) {   // returns value
+    console.log(e);
+}
+
+Summary:
+- for...in iterates over object keys or array indexes.
+- for...of iterates over iterable values like arrays or strings.
+- Use for...of when working with array values directly.
+- Use for...in mainly for object properties.
